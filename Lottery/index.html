@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passive Lottery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: white;
+            letter-spacing: 0.1em;
+            font-size: 2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .slot-machine-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .slot-viewport {
+            width: 400px;
+            height: 240px; 
+            overflow: hidden;
+            position: relative;
+            border: 8px solid transparent;
+            border-image: linear-gradient(to bottom, #fbbf24, #d97706) 1;
+            border-radius: 12px;
+            box-shadow: 0 0 30px rgba(251, 191, 36, 0.4), inset 0 0 20px rgba(0,0,0,0.5);
+            background: #1a202c;
+            z-index: 10; 
+        }
+        
+        .slot-viewport::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0.1) 50%, rgba(0,0,0,0.6) 100%);
+            pointer-events: none;
+            z-index: 15;
+        }
+
+        .slot-strip {
+            will-change: transform;
+            transform: translateY(0); 
+        }
+
+        .skill-item {
+            height: 80px; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 0 1rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            border-bottom: 1px solid rgba(0,0,0,0.2);
+        }
+
+        .skill-item:nth-child(even) {
+            background: #2d3748;
+            color: #fbbf24;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .skill-item:nth-child(odd) {
+            background: #e2e8f0;
+            color: #1a202c;
+        }
+
+        .arrow-side {
+            position: absolute;
+            right: -15px; 
+            top: 50%;
+            transform: translateY(-50%) rotate(90deg); 
+            width: 0;
+            height: 0;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-top: 40px solid #fbbf24;
+            filter: drop-shadow(-4px 0 4px rgba(0, 0, 0, 0.3));
+            z-index: 30;
+        }
+
+        .spin-button {
+            margin-top: 2rem;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 9999px;
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: #1a202c;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(251, 191, 36, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .spin-button:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(251, 191, 36, 0.6);
+        }
+
+        .spin-button:active:not(:disabled) {
+            transform: translateY(0);
+        }
+
+        .spin-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            background: linear-gradient(135deg, #9ca3af, #6b7280);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            transform: scale(0.95);
+        }
+
+        .result-card {
+            margin-top: 3rem;
+            background: linear-gradient(to bottom right, #fffbeb, #fef3c7);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            border: 2px solid #fbbf24;
+            display: none;
+            animation: slideIn 0.5s ease-out;
+            text-align: center;
+        }
+
+        .result-card.show {
+            display: block;
+        }
+
+        .result-card h2 {
+            color: #78350f;
+            margin-bottom: 0.75rem;
+            font-size: 1.875rem;
+            font-weight: 700;
+        }
+
+        .result-card p {
+            color: #92400e;
+            opacity: 0.9;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PASSIVE LOTTERY</h1>
+        
+        <div class="slot-machine-wrapper">
+            <div class="slot-viewport">
+                <div class="slot-strip" id="slotStrip"></div>
+            </div>
+            <div class="arrow-side"></div>
+        </div>
+
+        <button class="spin-button" id="spinButton">DRAW A PASSIVE</button>
+
+        <div class="result-card" id="resultCard">
+            <h2 id="prizeTitle"></h2>
+            <p id="prizeDescription"></p>
+        </div>
+    </div>
+
+    <script>
+        let skills = [];
+        const ITEM_HEIGHT = 80;
+        const TOTAL_DUPLICATIONS = 60; 
+        
+        const slotStrip = document.getElementById('slotStrip');
+        const spinButton = document.getElementById('spinButton');
+        const resultCard = document.getElementById('resultCard');
+        const resultTitle = document.getElementById('prizeTitle');
+        const resultDesc = document.getElementById('prizeDescription');
+
+        let isSpinning = false;
+        let currentSkillIndex = 0; 
+
+        async function loadSkillsFromFile() {
+            try {
+                const response = await fetch('skills.txt');
+                if (!response.ok) throw new Error("Arquivo skills.txt não encontrado!");
+
+                const text = await response.text();
+                skills = text.split('\n').map(line => {
+                        line = line.trim();
+                        if (!line) return null;
+                        const match = line.match(/^(\d+)\s*\.\s*(.+?)\s*[-–—]\s*(.+)/);
+                        if (match) {
+                            return { number: match[1], name: match[2].trim(), description: match[3].trim() };
+                        }
+                        return null;
+                    }).filter(item => item !== null);
+
+                if (skills.length === 0) {
+                    alert("Erro: Arquivo skills.txt vazio.");
+                    return;
+                }
+                
+                buildSlotMachine();
+
+            } catch (error) {
+                console.error("Erro:", error);
+                skills = [{ number: 0, name: "Erro de Leitura", description: "Use Live Server para rodar." }];
+                buildSlotMachine();
+            }
+        }
+
+        function buildSlotMachine() {
+            slotStrip.innerHTML = '';
+            
+            for (let i = 0; i < TOTAL_DUPLICATIONS; i++) {
+                skills.forEach(skill => {
+                    const itemDiv = document.createElement('div');
+                    itemDiv.className = 'skill-item';
+                    itemDiv.textContent = `#${skill.number} ${skill.name}`;
+                    slotStrip.appendChild(itemDiv);
+                });
+            }
+
+            jumpToSkill(0, 40);
+        }
+
+        function jumpToSkill(skillIndex, blockIndex) {
+            const centerOffset = ITEM_HEIGHT; 
+            const targetY = ((blockIndex * skills.length) + skillIndex) * ITEM_HEIGHT - centerOffset;
+            
+            slotStrip.style.transition = 'none';
+            slotStrip.style.transform = `translateY(-${targetY}px)`;
+            
+            slotStrip.offsetHeight;
+            
+            return targetY;
+        }
+
+        function spinSlot() {
+            if (isSpinning || skills.length === 0) return;
+
+            isSpinning = true;
+            spinButton.disabled = true;
+            spinButton.textContent = 'DRAWING...';
+            resultCard.classList.remove('show');
+
+            const winningIndex = Math.floor(Math.random() * skills.length);
+            const winner = skills[winningIndex];
+
+            const startBlock = 50; 
+            
+            jumpToSkill(currentSkillIndex, startBlock);
+
+            slotStrip.style.transition = 'transform 4s cubic-bezier(0.25, 0.1, 0.25, 1)';
+
+           
+            const blocksToClimb = 4;
+            const targetBlock = startBlock - blocksToClimb;
+
+            const centerOffset = ITEM_HEIGHT;
+            const finalPositionPx = ((targetBlock * skills.length) + winningIndex) * ITEM_HEIGHT - centerOffset;
+
+            slotStrip.style.transform = `translateY(-${finalPositionPx}px)`;
+
+            currentSkillIndex = winningIndex;
+
+            setTimeout(() => {
+                try {
+                    resultTitle.textContent = `#${winner.number} - ${winner.name}`;
+                    resultDesc.textContent = winner.description;
+                    resultCard.classList.add('show');
+                } catch (err) {
+                    console.error("Erro:", err);
+                } finally {
+                    isSpinning = false;
+                    spinButton.disabled = false;
+                    spinButton.textContent = 'DRAW AGAIN';
+                }
+            }, 4000);
+        }
+
+        spinButton.addEventListener('click', spinSlot);
+        loadSkillsFromFile();
+    </script>
+</body>
+</html>

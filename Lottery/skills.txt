@@ -1,0 +1,10 @@
+1. Monkey’s Eyes - Eyes that belonged to a monkey on Mount Huaguo; increases vision and strengthens the five senses.
+2. Master of Energies - Natural talent at handling of all kinds of energy. +10%  Recovery Rate, +10%  Resistance, +10% Increased Sensitivity, Increase Control over.
+3. Heaven Slaying Star - You are fated to Slay Heaven with your talent. All stats increased by 3, Stats increase based on the number of opponents you kill.
+4. Satiety - Restores 1 stamina per minute.
+5. Slow Healing - Regenerates 2 health per hour.
+6. Cool Skin - Fire resistance +50 points.
+7. Mutant - A random part of your body will possitively mutate gaining na aditional effect.
+8. Underwater Breathing - You can breathe through your skin and stay underwater for a long time. The longest time is 12 hours.
+9. Parallel Mind - Your ability to split the mind reaches such a proficiente level comparable to having two souls in one body. Activates a second consciousness.
+10. Body Smell Erased - Body odor reduced by 95%.
