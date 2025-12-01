@@ -8,3 +8,72 @@
 8. Underwater Breathing - You can breathe through your skin and stay underwater for a long time. The longest time is 12 hours.
 9. Parallel Mind - Your ability to split the mind reaches such a proficiente level comparable to having two souls in one body. Activates a second consciousness.
 10. Body Smell Erased - Body odor reduced by 95%.
+11. Blood Essence - Increases bloodline and blood essence condensation speed by 1000%.
+12. Clear Heart - Mind +10, Enlightenment +10, Mental Resistance +100, Mental Reaction +50%.
+13. Sharp Sword - Sword sharpness increased; ignores 10–30% defense.
+14. 9 Lives Cat - You have 9 lives like a cat;Upon death resurrect in random location; Massively weakened for up to 6 months.
+15. Buddha Light - Calms the mind and heart; expels evil; Mind +1, Enlightenment +1, Constitution +1.
+16. Power Amplification - The world empowers you attacks; all types of attack power +50%.
+17. Elemental Resistance - Innate resistence to all elements; reduces elemental damage by 30%.
+18. Auto Guard - The body automatically blocks one incoming attack.
+19. Battle Instinct - Greatly increases reaction speed during combat.
+20. Power of Harmony - When any status increases all other status will other increase by 10% that value.
+21. Gluttony - Every time you digest food, you can digest it 20% faster and more perfectly. At the same time, you will starve faster.
+22. Dao Sliver - A sliver or the great Dao habitates your being helpign perfect imperfections and guiding you from failure.
+23. Longevity - Your lifespan is longer than that of an ordinary person. You have an additional 100 years of lifespan.
+24. Armor Piercing Spear - Υour attack is like a sharp spear, able to pierce through the enemy’s defense. All of your attacks will ignore 1% of the enemy’s defense and directly attack the main body.
+25. 100 Poisons Body - Your body has a natural resistence to poison. Can automatically detoxify a weak to medium strengh poisons.
+26. Night Guardian - If you are in the dark, you will receive the protection of the darkness. Your aura and traces will be hidden, and your sense of existence will be reduced.
+27. Unyielding Heart - Even if The remaining life is as thin as paper, you should have an unyielding heart. The more seriously injuried you are the more your healing poweress is boosted.
+28. Soul Harvesting - You might obtain a soul for every cultivator you kill. Each soul could increase a little bit of spirit's foundation.
+29. Fisherman - Your fishing rate will increase by 50%, and you will have a 0.001 small chance of catching a treasure. The treasure can be spiritual artifacts, pills, cultivation techniques, or even opportunities!.
+30. Natural Berserker - Your injuries can be converted into attack power! The more serious your injuries are, the higher your attack power will be! The maximum attack power will be doubled!
+31. Reinforced Iron Bones - Your muscles and bones are like steel being poured over them. Your Defense will permanently increase by 10%.
+32. Daylight Combat - You will be even more valiant when you fight under the sun! Your Speed will increase by 10 points under the sun!
+33. Aprassing Eye - Eyes that never miss the opportunity! Treasures will now shine in your eyes, the shiner the more precious!
+34. Skill Proficiency - Your subclass skill success rate increases by 15%, but this passive skill can not be used beyond your level.
+35. Excellent Offspring - Harder to have children, but offspring inherit high aptitude; 1% chance to surpass you.
+36. Fighting Momentum - After entering combat mode, your strength will increase by 1% every 10 seconds. The increase cannot exceed 30%.
+37. Adaptive Shell - Your physical body is adaptive. When you take the same type of attack, you can reduce the same type of damage by 5% each time you receive damage. It can be stacked up to a maximum of five times.
+38. Invincible Aura - A certain kind of aura starts to form on your body. Every time you defeat an enemy, this aura will accumulate by one layer. Upon reaching certain levels of accumulation qualitative changes may occur.
+39. Purification of Heaven and Earth - Every 2 days, the surrounding Heaven and Earth Spiritual Qi will help you purify a negative state on your body. Negative states include Poison, Imprints, Karmic Seal…
+40. Gale Steps - Wind blesses your feet speed +5%.
+41. Second Heart - Gains a second heart; Blood Qi cap doubled; Strength/Endurance/Speed +15%.
+42. Racist - Against nonhuman enemies, damage +20%.
+43. Battle Experience - When you fight the same enemy multiple times, your damage increase, and damage reduction increase by 5%. Every time you fight, you gain a 5% increase. (Max: 5 stacks)
+44. Blood Qi Boost - Your attack will carry an additional 5% of Blood Qi. The additional Blood Qi power is calculated as a percentage of the total amount of Blood Qi. At the same time, it will not consume the Blood Qi power.
+45. Spirit Pet Heart - You and your spirit pet will be more in sync. At the same time, your spirit pet can inherit 1% of all your attributes. (Limit: 1)
+46. Body Generated Fragrance - Emits unique fragrance; Charm +1.
+47. Blood Pack - Body contains 5× normal blood with no drawbacks.
+48. Charming Smile - Your smie is realyl charming, helping people feel more at ease 
+and comfortable with you, Charm +2(when smiling).
+49. Charming Eyes -  Your eyes are really pretty able to make others loose themselves in them, Charms +1.
+50. Strong Legs - Stronger, tougher legs; increases speed slightly and improves kicks.
+51. Iron Fists - Fists are tempered to be as strong as iron; boosts unarmed and fist attacks.
+52. Scholar - You are an expert at reading, learning, and retaining information, you could read 50 books in a day and sitll be able to retain all of the information.
+53. Drax - When standing till for long periods of time, you start to escape people's perception, after 10 minutes, eople don't even detect your breathing or be able to acknowledge you there.
+54. Iron Palate - You can eat and digest just about anything that isn't lethal poison to you, will gain energetic value relevant to whats injected.
+55. Human Well - Extremely large energy pools; reserves +40%.
+56. Homewrecker - Married women and MILFS find themselves more attracted to you and consider you a potential romantic interest more easily, +10 charm to the individuals in question.
+57. Linguist - You are able to understand all mundane languages and are very good at learning non-mundane ones too.
+58. Cardboard World - Perfect control of body strength and output.
+59. Quantum Disentanglement - Cannot be restrained; always slips free seals.
+60. Photosynthesis - Regenerates energy in sunlight(or moonlight but with decreased efficiency); doesn’t need food under sun (water still needed).
+61. Alluring Whisper - You have the voice of a sedductress, smooth, buttery and attractive, +1 charm and enhances your voice-based abilities 20% at no cost.
+62. Rise and Shine - Waking at sunrise fully restores physical and mental exhaustion.
+63. One with the Weapon - You are one with your weapon, whatever item you wield gets your physical stats added to its own stats.
+64. Virtue Acumulator - Every good action you perform will gain you a little of virtue, upon enough virtue a phenomenom will occur.
+65. Consumption Reduction - Your Blood Qi, soul power, or spiritual power consumption will be optimized. Reduces energy consumption by 10%.
+66. Cultivation Simulation - Each cultivation triggers an extra simulated cultivation.
+67. Time Bleassing - All soul rings gain +5,000 years at first of every oncoming year.
+68. Nah It’s Mine Now - 5% chance to comprehend techniques or natural talent type attack  used against you.
+69. Bio AI - Part of the brain mates to becomes a biological super AI.
+70. Piercing Yang - Projectile accuracy +50% and power +15%.
+71. Body of Thorns - Reflects 15% of damage taken.
+72. Immovable Mountain - You can borrow the earth’s essence as long as you stay still and keep your feet on the ground. +25% damage reduction.
+73. Talent Plundering - You will receive a certain amount of 'talent' for every opponent you kill.
+74. Weapon Expert - Any weapon you hold will give you a unique attribute boost.
+75. Selfaware - You have complete and totla udnerstanding of your entire physical state being isntantly able to tell the depth and severity of any physical injuries as well cause.
+76. Body Methamorphosis - Your body has reached the stage of transformation and will transform, raise all physical stats +100
+77. The Universe in the Sleeve - Your sleeve contains a near infinity space that can shirnk and house both organic and inorganic life, all time is frozen inside with no energetic cost what so ever.
+78. Death's Toyboy - Death has a unique liking to you, all insta death type attacks are nullified when used on you.
